@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学生向けカーリース予約</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>学生向けカーリース予約フォーム</h1>
+  <form id="reservationForm">
+    <label>氏名：<input type="text" name="name" required /></label>
+    <label>学籍番号：<input type="text" name="studentId" required /></label>
+    <label>使用用途：
+      <select name="purpose" required>
+        <option value="">選択してください</option>
+        <option value="通学">通学</option>
+        <option value="課外活動">課外活動</option>
+        <option value="旅行">旅行</option>
+        <option value="その他">その他</option>
+      </select>
+    </label>
+    <label>利用人数：<input type="number" name="people" min="1" required /></label>
+    <label>使用開始時間：<input type="datetime-local" name="startTime" required /></label>
+    <label>使用終了時間：<input type="datetime-local" name="endTime" required /></label>
+    <button type="submit">予約する</button>
+  </form>
+  <div id="confirmation" style="display:none;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
